@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+<!-- DISCLAIMER: The following content was the original code for the entire tumblr style webpage that I based my page off of, as well as borrowed most of the basic CSS styles from. This document contains the original html, css, and script for the page - most of which is not included into my webpage. The link to the original code creators tumblr page will be included within the index.html, as well as displayed on the webpage as a navigation link and copyright within the footer, to provide visible credit toward the original author. -->
+
+<html>
+
+<head>
+  <title>{Title}</title>
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}"> {block:Description}
+  <meta name="description" content="{MetaDescription}" /> {/block:Description}
+
+  <meta name="color:Background" content="#f6f6f6" />
+  <meta name="color:Text" content="#656565" />
+  <meta name="color:Post" content="#fff" />
+  <meta name="color:Accent" content="#dcdcdc" />
+
+  <meta name="color:Link 1" content="#d95e40" />
+  <meta name="color:Link 2" content="#f2992e" />
+  <meta name="color:Link 3" content="#56bf4b" />
+  <meta name="color:Link 4" content="#66abd4" />
+  <meta name="color:Link 5" content="#a77dc2" />
+
+  <meta name="color:Back to Top" content="#e57ca2" />
+
+  <meta name="text:Link 1" content="/" />
+  <meta name="text:Title 1" content="index" />
+  <meta name="text:Link 2" content="/ask" />
+  <meta name="text:Title 2" content="message" />
+  <meta name="text:Link 3" content="Link 3" />
+  <meta name="text:Title 3" content="Title Link 3" />
+  <meta name="text:Link 4" content="Link 4" />
+  <meta name="text:Title 4" content="Title Link 4" />
+  <meta name="text:Link 5" content="Link 5" />
+  <meta name="text:Title 5" content="Title Link 5" />
+
+  <meta name="select:Body Size" content="10" title="10">
+  <meta name="select:Body Size" content="11" title="11">
+  <meta name="select:Body Size" content="12" title="12">
+
+  <meta name="select:Icon 1" content="home" title="Index 1">
+  <meta name="select:Icon 1" content="at" title="Index 2">
+  <meta name="select:Icon 1" content="user-circle" title="Index 3">
+  <meta name="select:Icon 1" content="user-circle-o" title="Index 4">
+  <meta name="select:Icon 1" content="user-o" title="Index 5">
+  <meta name="select:Icon 1" content="user" title="Index 6">
+
+  <meta name="select:Icon 2" content="envelope-o" title="Ask 1" />
+  <meta name="select:Icon 2" content="envelope" title="Ask 2" />
+  <meta name="select:Icon 2" content="comment" title="Ask 3" />
+  <meta name="select:Icon 2" content="comment-o" title="Ask 4" />
+  <meta name="select:Icon 2" content="commenting" title="Ask 5" />
+  <meta name="select:Icon 2" content="commenting-o" title="Ask 6" />
+  <meta name="select:Icon 2" content="paper-plane" title="Ask 7" />
+  <meta name="select:Icon 2" content="paper-plane-o" title="Ask 8" />
+
+  <meta name="select:Icon 3" content="bookmark-o" title="Tag 1" />
+  <meta name="select:Icon 3" content="bookmark" title="Tag 2" />
+  <meta name="select:Icon 3" content="tag" title="Tag 3" />
+  <meta name="select:Icon 3" content="tags" title="Tag 4" />
+  <meta name="select:Icon 3" content="hashtag" title="Tag 5" />
+  <meta name="select:Icon 3" content="heart-o" title="Blogroll 1" />
+  <meta name="select:Icon 3" content="heart" title="Blogroll 2" />
+  <meta name="select:Icon 3" content="plus" title="Blogroll 3" />
+  <meta name="select:Icon 3" content="plus-circle" title="Blogroll 4" />
+
+  <meta name="select:Icon 4" content="folder-open-o" title="Download 1" />
+  <meta name="select:Icon 4" content="folder-open" title="Download 2" />
+  <meta name="select:Icon 4" content="cloud" title="Download 3" />
+  <meta name="select:Icon 4" content="cloud-download" title="Download 4" />
+  <meta name="select:Icon 4" content="folder-o" title="Download 5" />
+  <meta name="select:Icon 4" content="folder" title="Download 6" />
+  <meta name="select:Icon 4" content="download" title="Download 7" />
+
+  <meta name="select:Icon 5" content="paperclip" title="Resource 1" />
+  <meta name="select:Icon 5" content="file" title="Resource 2" />
+  <meta name="select:Icon 5" content="question-circle" title="Resource 3" />
+  <meta name="select:Icon 5" content="archive" title="Archive 1" />
+
+
+  <meta name="select:Custom Font" content="Salsa" title="Salsa">
+  <meta name="select:Custom Font" content="Fredoka One" title="Fredoka One">
+  <meta name="select:Custom Font" content="Passion One" title="Passion One">
+  <meta name="select:Custom Font" content="Lobster" title="Lobster">
+  <meta name="select:Custom Font" content="Lobster Two" title="Lobster Two">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Fredoka+One|Lobster|Lobster+Two|Passion+One|Salsa|Noto+Sans|Roboto|Lato|Open+Sans|Source+Sans+Pro|Droid+Sans|Khula" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/5b270f343a.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://static.tumblr.com/rzl30kg/eAxm7a751/jquery.style-my-tooltips.js"></script>
+  <link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+
+
+  <style>
+    body {
+      background: {
+        color: Background
+      }
+      ;
+      font-family: 'Montserrat';
+      font-size: {
+        select: Body Size
+      }
+      px;
+      color: {
+        color: Text
+      }
+      ;
+      letter-spacing: 0.3px;
+    }
+
+    a {
+      text-decoration: none;
+      color: {
+        color: Text
+      }
+      ;
+      cursor: pointer;
+      transition: 300ms ease;
+    }
+
+    b {
+      font-weight: 600;
+    }
+
+    p {
+      margin: 12px 16px;
+    }
+
+    blockquote,
+    pre,
+    ol,
+    ul {
+      margin: 15px;
+    }
+
+    blockquote {
+      border-left: 2px solid {
+        color: Accent
+      }
+      ;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    /*---NAVIGATION---*/
+
+    aside {
+      position: fixed;
+      top: 50%;
+      transform: translate(-110px, -50%);
+    }
+
+    #links {
+      width: 50px;
+      text-align: center;
+    }
+
+    .nav {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 3px;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .nav i {
+      padding-top: 12px;
+      text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .link1 {
+      background: {
+        color: Link 1
+      }
+      ;
+    }
+
+    .link2 {
+      background: {
+        color: Link 2
+      }
+      ;
+    }
+
+    .link3 {
+      background: {
+        color: Link 3
+      }
+      ;
+    }
+
+    .link4 {
+      background: {
+        color: Link 4
+      }
+      ;
+    }
+
+    .link5 {
+      background: {
+        color: Link 5
+      }
+      ;
+    }
+
+    #links i {
+      color: #fff;
+      font-size: 26px;
+    }
+    /*---POSTS---*/
+
+    .post {
+      margin-top: 100px;
+      width: 500px;
+    }
+
+    .post img {
+      width: 100%;
+      height: auto!important;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    h1 {
+      padding: 10px 15px;
+      font-size: 26px;
+      letter-spacing: 0.5px;
+      color: {
+        color: Text
+      }
+      ;
+      font-weight: normal;
+      font-family: {
+        select: Custom Font
+      }
+      ;
+      background: {
+        color: Text
+      }
+      ;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: {
+        color: Post
+      }
+      ;
+      text-align: left;
+      text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.04);
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .txt {
+      padding: 3px;
+      line-height: 170%;
+      background: {
+        color: Post
+      }
+      ;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .txt ul,
+    .txt ol,
+    .txt li {
+      margin: 5px;
+    }
+
+    .txt a:hover {
+      color: {
+        color: Back to Top
+      }
+      ;
+    }
+
+    .txt img {
+      box-shadow: 0px 0px rgba(0, 0, 0, 0);
+    }
+    /*---QUOTE---*/
+
+    .qs {
+      padding: 10px;
+      text-transform: uppercase;
+      text-align: right;
+      background: {
+        color: Post
+      }
+      ;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+      font-size: 9px;
+    }
+    /*---CHAT---*/
+
+    .chat {
+      margin-top: -5px;
+      margin-left: -25px;
+      margin-bottom: 12px;
+    }
+
+    .chat li {
+      padding: 5px;
+      list-style: none;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+    /*---MUSIC---*/
+
+    .spotify_audio_player {
+      height: 80px!important;
+    }
+    /*---ASK---*/
+
+    .asker {
+      width: 500px;
+      font-weight: bold;
+      text-transform: none;
+      height: auto;
+      background: none;
+      letter-spacing: 1px;
+      color: {
+        color: Text
+      }
+      ;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      font-weight: normal;
+      font-family: {
+        select: Custom Font
+      }
+      ;
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.04);
+    }
+
+    .asker img {
+      vertical-align: middle;
+      margin: 0;
+      width: 36px;
+      height: 36px;
+      margin-right: 3px;
+      margin-bottom: 3px;
+      box-shadow: 0px 0px rgba(0, 0, 0, 0);
+    }
+
+    .question {
+      margin: 3px 0;
+      background: {
+        color: Post
+      }
+      ;
+      color: {
+        color: Text
+      }
+      ;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+    }
+    /*---INDEX PAGE---*/
+
+    .perma {
+      text-align: center;
+      width: 500px;
+      background: #fff;
+      line-height: 170%;
+      padding: 8px 0;
+      font-size: 9px;
+      text-transform: uppercase;
+      color: {
+        color: Text
+      }
+      ;
+      letter-spacing: 0.3px;
+      margin-top: 3px;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .perma a {
+      color: {
+        color: Text
+      }
+      ;
+      padding-right: 3px;
+      padding-left: 3px;
+    }
+
+    .like-b {
+      position: relative;
+      display: inline-block;
+      height: 1em;
+      line-height: 1em;
+    }
+
+    .like-b .like_button iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .like-b .liked+.b {
+      color: {
+        color: Back to Top
+      }
+      ;
+    }
+
+    .like-b .liked+.b:after {
+      content: 'd';
+    }
+    /*---PAGINATION---*/
+
+    .pag {
+      text-transform: lowercase;
+      font-size: 28px;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: .5px;
+      margin-top: 60px;
+      width: 500px;
+    }
+
+    .pag i {
+      font-size: 28px;
+      padding: 0 5px;
+      color: {
+        color: Text
+      }
+      ;
+    }
+    /*---FOOTER---*/
+
+    .footer {
+      margin-top: 3px;
+      line-height: 30px;
+      margin-bottom: 40px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: .5px;
+      {
+        block: PermalinkPage
+      }
+      margin-top: 20px;
+      {
+        /block: PermalinkPage
+      }
+    }
+    /*---BACK TO TOP---*/
+
+    .back-to-top {
+      display: none;
+      width: 50px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.02);
+      height: 50px;
+      background: {
+        color: Back to Top
+      }
+      ;
+      position: fixed;
+      z-index: 999;
+      right: 35px;
+      bottom: 30px;
+      text-align:center;
+      font-size: 26px;
+      color: {
+        color: Post
+      }
+      ;
+    }
+
+    .back-to-top i {
+      margin-top: 13px;
+    }
+    /*--PERMALINK PAGE---*/
+
+    .permalink {
+      text-align: center;
+      width: 500px;
+      text-transform: uppercase;
+      line-height: 150%;
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0;
+    }
+
+    ol.notes {
+      text-transform: lowercase;
+      width: 500px;
+      font-size: 10px;
+      padding: 0;
+      margin-top: 10px;
+      margin-left: 0;
+      list-style-type: none;
+    }
+
+    ol.notes li.note {
+      margin-top: 4px;
+      margin-left: 0;
+      text-align: left;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.08);
+      color: {
+        color: Text
+      }
+      ;
+    }
+
+    ol.notes li.note a {
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    ol.notes li.note img.avatar {
+      vertical-align: -4px;
+      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+    }
+
+    ol.notes li.note span.action {
+      font-weight: normal;
+    }
+
+    ol.notes li.note .answer_content {
+      font-weight: normal;
+    }
+
+    ol.notes li.note blockquote {
+      padding: 4px 10px;
+      margin: 10px 0px 0px 25px;
+      border-left: 2px solid {
+        color: Accent
+      }
+      ;
+    }
+
+    ol.notes li.note blockquote a {
+      text-decoration: none;
+      font-weight: 400;
+    }
+    /*---ETC---*/
+
+    #s-m-t-tooltip {
+      max-width: 300px;
+      z-index: 99999999;
+      margin: 5px 25px;
+      padding: 5px;
+      color: {
+        color: Post
+      }
+      ;
+      background: {
+        color: Text
+      }
+      ;
+      word-wrap: break-word;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.06);
+      font-size: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <aside>
+      <div id="links">
+        <a title="{text:Title 1}" href="{text:Link 1}">
+          <div class="nav link1"><i class="fa fa-{select:Icon 1}" aria-hidden="true"></i></div>
+        </a>
+        <a title="{text:Title 2}" href="{text:Link 2}">
+          <div class="nav link2"><i class="fa fa-{select:Icon 2}" aria-hidden="true"></i></div>
+        </a>
+        <a title="{text:Title 3}" href="{text:Link 3}">
+          <div class="nav link3"><i class="fa fa-{select:Icon 3}" aria-hidden="true"></i></div>
+        </a>
+        <a title="{text:Title 4}" href="{text:Link 4}">
+          <div class="nav link4"><i class="fa fa-{select:Icon 4}" aria-hidden="true"></i></div>
+        </a>
+        <a title="{text:Title 5}" href="{text:Link 5}">
+          <div class="nav link5"><i class="fa fa-{select:Icon 5}" aria-hidden="true"></i></div>
+        </a>
+
+      </div>
+
+    </aside>
+
+
+    {block:Posts}
+    <div class="post" id="{PostID}">
+
+
+      {block:Text} {block:Title}
+      <h1>{Title}</h1> {/block:Title}
+      <div class="txt">{Body}</div>
+      {/block:Text} {block:Photo}
+      <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"> {/block:Photo} {block:Photoset}
+      <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}
+        <div class="photo-data">
+          <div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
+      {/block:Photoset} {block:Quote}
+      <h1><i class="fa fa-quote-left" aria-hidden="true"></i> {Quote}</h1>
+      <div class="qs">
+        {block:Source}&mdash; {Source}{/block:Source}
+      </div>
+      {/block:Quote} {block:Link}
+      <a href="{URL}" {Target}><h1>{Name}</h1></a>
+      <div class="txt">
+        {block:Description}{Description}{/block:Description}
+      </div>
+      {/block:Link} {block:Chat} {block:Title}
+      <h1>{Title}</h1>{/block:Title}
+      <ul class="chat">
+        {block:Lines}
+        <li class="{Alt} user_{UserNumber}">
+          {block:Label}
+          <span class="label">{Label}</span> {/block:Label}{Line}
+        </li>
+        {/block:Lines}
+      </ul>
+      </li>
+      {/block:Chat} {block:Audio} {AudioPlayer} {/block:Audio} {block:Video} {Video-500} {/block:Video} {block:Answer}
+      <div class="asker"><img src="{AskerPortraitURL-64}" /> {Asker}:</div>
+      <div class="question txt">
+        <p>{Question}</p>
+      </div>
+      <div class="txt">
+        <p>{Answer}</p>
+      </div>
+      {/block:Answer} {block:Caption}
+
+      <div class="txt">{Caption}</div>{/block:Caption} {block:IndexPage}
+      <div class="perma">
+        <a href="{Permalink}">{NoteCountWithLabel} </a> - <a title="{TimeAgo}" href="{Permalink}"> {DayOfWeek}</a> - <a href="{ReblogURL}" target="_blank">reblog</a> - <a class="like-b" href="#">{LikeButton}<span class="b">like</span></a>
+
+      </div>
+      {/block:IndexPage} {block:PermalinkPage} {block:Date}
+      <div class="permalink">
+        posted <b>{TimeAgo}</b> on <b>{DayofMonthWithSuffix}</b> <b>{Month}</b>
+        <br> {block:HasTags}
+        <b>tags:</b> {block:Tags}#<a href="{TagURL}">{Tag}</a> {/block:Tags}
+        <br><br> {/block:HasTags}
+      </div>
+
+      {block:Posts}{PostNotes}{/block:Posts} {/block:Date} {/block:PermalinkPage}
+
+
+      <!-- {block:NoRebloggedFrom}
+{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}
+{/block:NoRebloggedFrom} -->
+
+      {block:ContentSource}
+      <!-- {SourceURL}
+{block:SourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+      {/block:ContentSource} {/block:Posts} {block:Pagination}
+      <div class="pag">
+        {block:PreviousPage}<a href="{PreviousPage}"><i class="fa fa-angle-left" aria-hidden="true"></i></a>{/block:PreviousPage} {lang:Page CurrentPage of TotalPages}{/block:Pagination} {block:NextPage}
+        <a href="{NextPage}"><i class="fa fa-angle-right" aria-hidden="true"></i> </a>{/block:NextPage}
+      </div>
+      {/block:Pagination}
+
+
+      <div class="footer">© Theme by Flirtastic, 2017</div>
+
+    </div>
+
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+
+
+    <script>
+      (function($) {
+        $(document).ready(function() {
+          $("[title]").style_my_tooltips({
+            tip_delay_time: 200,
+            tip_fade_speed: 300
+          });
+        });
+      })(jQuery);
+
+
+
+      $(document).ready(function() {
+        $('.photo-slideshow').pxuPhotoset({
+          lightbox: true,
+          rounded: false,
+          gutter: '3px',
+          borderRadius: '0px',
+          photoset: '.photo-slideshow',
+          photoWrap: '.photo-data',
+          photo: '.pxu-photo'
+        });
+      });
+
+
+      var amountScrolled = 300;
+
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > amountScrolled) {
+          $('a.back-to-top').fadeIn('slow');
+        } else {
+          $('a.back-to-top').fadeOut('slow');
+        }
+      });
+
+      $('a.back-to-top').click(function() {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 700);
+        return false;
+      });
+    </script>
+
+</body>
+
+</html>

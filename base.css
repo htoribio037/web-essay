@@ -1,0 +1,666 @@
+@charset "UTF-8";
+
+/*
+Primary Style Sheet for index.html
+Author: Harley Toribio
+Date: 10.6.17
+
+DISCLAIMER: As this code was originally designed for a tumblr style page, much of the CSS is unnecessary for a normal webpage, especially one designed for displaying a web essay. This is why so much of the code, especially toward the bottom of the page, is commented out.
+
+((The basis for this code was originally designed by the author Madoof/flirtasitc on tumblr. However, much of the original css is NOT included or commented out.))
+*/
+
+/*Basic*/
+
+html{
+  color: white;
+}
+
+/*The font 'Montserrat' can be found linked from Google Fonts within the index.html.*/
+
+body {
+  background: #f4f4f4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  color: #222222;
+  letter-spacing: 0.3px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+}
+
+/*This will target all a elements so when hovering over it, the color eases to a different one, and the underline is removed. A cursor style is also added.*/
+
+a {
+  text-decoration: none;
+  color: #222222;
+  cursor: pointer;
+  transition: 300ms ease;
+}
+
+b {
+  font-weight: 600;
+}
+
+p {
+  margin: 12px 16px;
+}
+
+blockquote, pre, ol, ul{
+  margin: 15px;
+}
+
+blockquote {
+  border-left: 2px solid #FF7055;
+}
+
+/*This affects the .container class that wraps all the content (of the essay and posts) located within the body element.*/
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/*NAV*/
+
+/*The following styles affect the nav and any ul, li, or a element within it.*/
+
+nav{
+  width: 500px;
+  margin: 20px 0;
+  text-align: center;
+  font-family: 'Karla';
+}
+
+nav>ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+
+nav>ul>li{
+  float: left;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.02);
+}
+
+/*This style affects nav li items but only when the user hovers over it. It also inherits the styles that can be found within the nav and ul.*/
+
+nav>ul>li:hover{
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.65);
+  transition: 800ms ease-in-out;
+}
+
+/*The .drop-menu is for a certain ul that will appear uniquely on the page and it will feature some of the same styles as the typical nav (such as ul, li, and li:hover)*/
+
+ul.drop-menu{
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+}
+
+ul.drop-menu li{
+  background: #666;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+ul.drop-menu li:hover{
+  background: #f4f4f4;
+  color: black;
+}
+
+/*This is set to 'display: none;' so it will not appear on the rendered page.*/
+
+ul.drop-menu li{
+  display: none;
+}
+
+/*This makes the .drop-menu li:hover adopt the styles of the normal li:hover styles already defined. This will also set the .drop-menu li:hover to display as a block.*/
+
+
+/*The following style is commented out simply because it isn't necessary for the structure of the page. It is still included in the CSS, though, to show the original structure of the page.*/
+
+/*ul.menu li{
+  background: {
+    color: Accent
+  }
+  ;
+  color: {
+    color: Post
+  }
+  ;
+}*/
+
+/*Links*/
+
+/*The aside contains the #links id that affects all navigational elements that can be seen on the left-hand side of the page at all times in a fixed positon as well as set to a specific location on the page.*/
+
+aside{
+  position: fixed;
+  top: 50%;
+  transform: translate(-110px, -50%);
+}
+
+/*The #links style is changing the alignment and width of all #links elements.*/
+
+#links{
+  width: 50px;
+  text-align: center;
+}
+
+/*The .nav class styles will create visible styles for the navigation bar. The makes each square of the nav a certain width/height, set a bottom margin to separate them, and add a box shadow.*/
+
+.nav{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 3px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+/*These styles target any i element that is placed within the .nav class.*/
+
+.nav i{
+  padding-top: 12px;
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+/*Each individual link has its own specific background color to better distinguish between each nav item. They are all identifiable both within the code (by their class of .link#) and on the rendered page by color.*/
+
+.link1{
+  background: #d95e40;
+}
+
+.link2{
+  background: #f2992e;
+}
+
+.link3{
+  background: #56bf4b;
+}
+
+.link4{
+  background: #66abd4;
+}
+
+.link5{
+  background: #a77dc2;
+}
+
+/*This affects the small icons that can be found within the i element that is inserted within each .link of the nav bar on the left side of the page. All icons were sourced from fontawesome and can be found within the html.*/
+
+#links i{
+  color: #fff;
+  font-size: 26px;
+}
+
+/*back-to-top*/
+
+/*The .back-to-top class is the small pink icon that appears on the bottom right of the page. These styles change the way it appears on the page once the user has scrolled a certain amount (which is controlled by javascript from the original code that can be located beneath the body of the index.html within the 'SCRIPTS' area.*/
+
+.back-to-top{
+  display: none;
+  width: 50px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.02);
+  height: 50px;
+  background: pink;
+  position: fixed;
+  z-index: 999;
+  right: 35px;
+  bottom: 30px;
+  text-align: center;
+  font-size: 26px;
+  color: white;
+}
+
+/*This will target and change the top margin of the imported icon within the .back-to-top element that was also sourced from fontawesome.*/
+
+.back-to-top i{
+  margin-top: 13px;
+}
+
+/*txt-to-top*/
+
+/*The .txt-to-top class/feature appears on the page using the body font, however, this is used to include the class within the CSS simply to keep note of its separate functionality, and to have in case more styles need to be added.*/
+
+.txt-to-top, .txt-to-top i{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*txt*/
+
+/*The .post class is all the content within the body and is applied to each new section of either text or media content.*/
+
+.post{
+  margin-top: 100px;
+  width: 500px;
+}
+
+/*This targets all images that may or may not be part of the .post class, as some are just text (which can be seen by finding the .txt class that is found within text only posts).*/
+
+.post img{
+  width: 100%;
+  height: auto!important;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+}
+
+/*This changes the h1 that can be found at the top of most, if not all, .post text and/or media content.*/
+
+h1{
+  padding: 10px 15px;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  color: #222222;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  background: #222222;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+  text-align: left;
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+}
+
+/*This is applying padding, line-height, background color, and box-shadow styles to any content that includes the .txt class.*/
+
+.txt{
+  padding: 3px;
+  line-height: 170%;
+  background: #fff;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+}
+
+/*This style affects all ul, ol, li, a, and img elements that may be included within the .txt class. This is changing the way these elements will appear on the page. Specifically, margin, color, and img box-shadows.*/
+
+.txt ul, .txt ol, .txt li{
+  margin: 5px;
+}
+
+.txt a:hover{
+  color: #e57ca2;
+}
+
+.txt img{
+  box-shadow: 0px 0px rgba(0, 0, 0, 0);
+}
+
+/*quote*/
+
+/*This is not a necessary style, however, I am leaving it in just in case a quote appears on the page and requires these styles.*/
+
+.qs{
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: right;
+  background: #fff;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+  font-size: 9px;
+}
+
+/*The Chat, Music, and Ask sections are commented out due to the lack of need for them on this type of webpage.*/
+
+/*chat*/
+
+.chat{
+  margin-top: -5px;
+  margin-left: -25px;
+  margin-bottom: 12px;
+}
+
+.chat li{
+  padding: 5px;
+  list-style: none;
+}
+
+.label{
+  font-weight: bold;
+}
+
+/*music*/
+
+.spotify_audio_player{
+  height: 80px!important;
+}
+
+/*ask*/
+
+.asker{
+  width: 500px;
+  font-weight: bold;
+  text-transform: none;
+  height: auto;
+  background: none;
+  letter-spacing: 1px;
+  color: #222222;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  font-family: 'Salsa';
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.04);
+}
+
+.asker img{
+  vertical-align: middle;
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0);
+}
+
+.question{
+  margin: 3px 0;
+  background: #fff;
+  color: #222222;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+}
+
+/*perma*/
+
+/*The .perma class is located beneath each .post element to supply space for a back to top (txt-to-top) button, as well as an a element to direct the user to the source of the information and/or image when interacted with.*/
+
+.perma{
+  text-align: center;
+  width: 500px;
+  background: #fff;
+  line-height: 170%;
+  padding: 8px 0;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #222222;
+  letter-spacing: 0.3px;
+  margin-top: 3px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
+}
+
+/*These next two styles apply only to a elements within the .perma section of each text and/or image post. This is changing the way they are displayed when active and then when hovered over.*/
+
+.perma a{
+  color: #222222;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.perma a:hover{
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/*The following code (all through the 'Pagination' to 'Footer' sections) is all original code from the source. It is unneeded for this specific webpage, but included nonetheless in case it is needed, or purely for showing original content.*/
+
+/*.like-b {
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+}
+
+.like-b .like_button iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+.like-b .liked+.b {
+  color: #e57ca2;
+}
+
+.like-b .liked+.b:after {
+  content: 'd';
+}
+*/
+
+
+/*---PAGINATION---*/
+
+
+/*.pag {
+  text-transform: lowercase;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin-top: 60px;
+  width: 500px;
+}
+
+.pag i {
+  font-size: 28px;
+  padding: 0 5px;
+  color: #222222;
+}*/
+
+
+/*footer*/
+
+.footer {
+  margin-top: 3px;
+  line-height: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .5px;
+}
+
+
+/*The rest of the code from here down is commented out due to the lack of necessity for them and their functions, as they do not apply for this type of page, but are from the original code source.*/
+
+
+/*--PERMALINK PAGE---*/
+
+
+/*
+.permalink {
+  text-align: center;
+  width: 500px;
+  text-transform: uppercase;
+  line-height: 150%;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+
+ol.notes {
+  text-transform: lowercase;
+  width: 500px;
+  font-size: 10px;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 0;
+  list-style-type: none;
+}
+
+ol.notes li.note {
+  margin-top: 4px;
+  margin-left: 0;
+  text-align: left;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.08);
+  color: #222222;
+}
+
+ol.notes li.note a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ol.notes li.note img.avatar {
+  vertical-align: -4px;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+ol.notes li.note span.action {
+  font-weight: normal;
+}
+
+ol.notes li.note .answer_content {
+  font-weight: normal;
+}
+
+ol.notes li.note blockquote {
+  padding: 4px 10px;
+  margin: 10px 0px 0px 25px;
+  border-left: 2px solid #FF7055;
+}
+
+ol.notes li.note blockquote a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer a:hover {
+  color: rgba(0, 0, 0, 0.2);
+}*/
+
+
+/*NAV AMIMATION*/
+
+
+/*li:hover>ul.drop-menu.menu li {
+  opacity: 0;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+li:hover>ul.drop-menu.menu li:nth-child(1) {
+  -webkit-animation-name: menu;
+  animation-name: menu;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-delay: 150ms;
+  animation-delay: 150ms;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+li:hover>ul.drop-menu.menu li:nth-child(2) {
+  -webkit-animation-name: menu;
+  animation-name: menu;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+li:hover>ul.drop-menu.menu li:nth-child(3) {
+  -webkit-animation-name: menu;
+  animation-name: menu;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-delay: 450ms;
+  animation-delay: 450ms;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+li:hover>ul.drop-menu.menu l:nth-child(4) {
+  -webkit-animation-name: menu;
+  animation-name: menu;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+li:hover>ul.drop-menu.menu li:nth-child(5) {
+  -webkit-animation-name: menu;
+  animation-name: menu;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-delay: 750ms;
+  animation-delay: 750ms;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+li:hover>ul.drop-menu.menu li:nth-child(6) {
+  -webkit-animation-name: menu;
+  animation-name: menu;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes menu {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes menu1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}*/
+
+
+/*---ETC---*/
+
+
+/*
+#s-m-t-tooltip {
+  max-width: 300px;
+  z-index: 99999999;
+  margin: 5px 25px;
+  padding: 5px;
+  color: #fff;
+  background: #222222;
+  word-wrap: break-word;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.06);
+  font-size: 8px;
+}*/

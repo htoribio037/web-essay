@@ -12,11 +12,13 @@ DISCLAIMER: As this code was originally designed for a tumblr style page, much o
 
 /*Basic*/
 
+/*This will just set the color of the HTML element to white.*/
+
 html{
   color: white;
 }
 
-/*The font 'Montserrat' can be found linked from Google Fonts within the index.html.*/
+/*For the body, there are multiple different font styles being added, such as size, family, spacing, color, margins, etc. The overflow is being set to scroll so that is any content exceeds the boundries of the page, the user will be able to scroll to see them. Alsom the font used here, Montserrat, was sourced through Google Fonts and can be found within the head of the index.html.*/
 
 body {
   background: #f4f4f4;
@@ -38,17 +40,19 @@ a {
   transition: 300ms ease;
 }
 
-b {
-  font-weight: 600;
-}
+/*This sets all margins of the p element to certain values to adjust its placement on the page.*/
 
 p {
   margin: 12px 16px;
 }
 
+/*These margin styles will affect any elements within the selector.*/
+
 blockquote, pre, ol, ul{
   margin: 15px;
 }
+
+/*This will create a border of 2px with a solid color on the left side of any featured blockquote elements.*/
 
 blockquote {
   border-left: 2px solid #FF7055;
@@ -63,7 +67,7 @@ blockquote {
 
 /*NAV*/
 
-/*The following styles affect the nav and any ul, li, or a element within it.*/
+/*These styles will affect the width and margins of the nav element, as well as cause any text content within it to align in the center, as well as adopt the font family of Karla, which was sourced from Google Fonts and can be found within the head of the index.html.*/
 
 nav{
   width: 500px;
@@ -72,6 +76,8 @@ nav{
   font-family: 'Karla';
 }
 
+/*This style rule sets the ul element to inherit all set nav styles, as well as add a few more. This removes any list styles, sets certain padding/margin values, as well as sets the display to inline block - to display as a block but make the ul elements display one after the other in a horizontal line. A box shadow is also being added around the ul element.*/
+
 nav>ul{
   list-style: none;
   padding: 0;
@@ -79,6 +85,8 @@ nav>ul{
   display: inline-block;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.02);
 }
+
+/*Like above, here it is set that any li element will inherit styles not just from the ul element, but the nav element as well. Also added to this element are styles that set the dimensions of the li element, various font styles and transformations, as well as a cursor style, line height and letter spacing style.*/
 
 nav>ul>li{
   float: left;
@@ -93,7 +101,7 @@ nav>ul>li{
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.02);
 }
 
-/*This style affects nav li items but only when the user hovers over it. It also inherits the styles that can be found within the nav and ul.*/
+/*Exactly like above, this makes it so any li element will inherit styles not just from the ul element, but the nav element as well. However, the three styles put in here are only applied to li's when the user hovers over them. These styles include a nearly transparent background color and a transition style.*/
 
 nav>ul>li:hover{
   background: rgba(0, 0, 0, 0.1);
@@ -101,7 +109,7 @@ nav>ul>li:hover{
   transition: 800ms ease-in-out;
 }
 
-/*The .drop-menu is for a certain ul that will appear uniquely on the page and it will feature some of the same styles as the typical nav (such as ul, li, and li:hover)*/
+/*Here there are styles set for the ul element with the .drop-menu class, meaning that if a ul element does not have that class, these styles will not be applied. These ul.drop-menu styles include certain positioning styles as well as width and padding.*/
 
 ul.drop-menu{
   position: absolute;
@@ -111,23 +119,26 @@ ul.drop-menu{
   padding: 0;
 }
 
+/*These li styles will only be applied to li's that can be found within the ul element with the .drop-menu class. These styles will set the background color and font color of this element.*/
+
 ul.drop-menu li{
   background: #666;
   color: rgba(255, 255, 255, 0.7);
 }
+
+/*These li styles will only be applied to the li element nested within the ul.drop-menu element when the user hovers over it.*/
 
 ul.drop-menu li:hover{
   background: #f4f4f4;
   color: black;
 }
 
-/*This is set to 'display: none;' so it will not appear on the rendered page.*/
+/*This style rule makes it so that the li elements within the ul.drop-menu will not be shown on the rendered page by setting the display to none.*/
 
 ul.drop-menu li{
   display: none;
 }
 
-/*This makes the .drop-menu li:hover adopt the styles of the normal li:hover styles already defined. This will also set the .drop-menu li:hover to display as a block.*/
 
 
 /*The following style is commented out simply because it isn't necessary for the structure of the page. It is still included in the CSS, though, to show the original structure of the page.*/
@@ -145,7 +156,7 @@ ul.drop-menu li{
 
 /*Links*/
 
-/*The aside contains the #links id that affects all navigational elements that can be seen on the left-hand side of the page at all times in a fixed positon as well as set to a specific location on the page.*/
+/*These styles are for the aside element which contains the nav on the left side of the page. These styles will set the positioning of the element, such as using the translate property to specifically place this element.*/
 
 aside{
   position: fixed;
@@ -153,27 +164,27 @@ aside{
   transform: translate(-110px, -50%);
 }
 
-/*The #links style is changing the alignment and width of all #links elements.*/
+/*These style rules are changing the width and alignment of any element that includes the #links id.*/
 
 #links{
   width: 50px;
   text-align: center;
 }
 
-/*The .nav class styles will create visible styles for the navigation bar. The makes each square of the nav a certain width/height, set a bottom margin to separate them, and add a box shadow.*/
+/*These styles will only apply to any element that contains the .nav class. These will set the dimensions of those elements, set up a bottom margin, as well as add a box shadow.*/
 
 .nav{
   width: 50px;
   height: 50px;
   margin-bottom: 3px;
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-/*These styles target any i element that is placed within the .nav class.*/
+/*These styles target any i element that is placed within the .nav class. These elements are only found where any fontawesome icons have been placed - such as the left nav bar and back to top button in the bottom right corner.*/
 
 .nav i{
   padding-top: 12px;
-  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 /*Each individual link has its own specific background color to better distinguish between each nav item. They are all identifiable both within the code (by their class of .link#) and on the rendered page by color.*/
@@ -198,7 +209,7 @@ aside{
   background: #a77dc2;
 }
 
-/*This affects the small icons that can be found within the i element that is inserted within each .link of the nav bar on the left side of the page. All icons were sourced from fontawesome and can be found within the html.*/
+/*This affects the small fontawesome icons that can be found within the i element that is inserted within each .link of the nav bar on the left side of the page. All icons were sourced from fontawesome and can be found within the head of the index.html.*/
 
 #links i{
   color: #fff;
@@ -240,14 +251,14 @@ aside{
 
 /*txt*/
 
-/*The .post class is all the content within the body and is applied to each new section of either text or media content.*/
+/*The .post class is all the content within the body and is applied to each new section of either text or media content. These styles will change that content's width as well as top margin.*/
 
 .post{
   margin-top: 100px;
   width: 500px;
 }
 
-/*This targets all images that may or may not be part of the .post class, as some are just text (which can be seen by finding the .txt class that is found within text only posts).*/
+/*This targets all images that may or may not be part of the .post class, as some are just text (which can be seen by finding the .txt class that is found within text only posts). These styles will set the image widths to 100% and allow the height to automatically defined. A box shadow will also be added to these elements.*/
 
 .post img{
   width: 100%;
@@ -255,7 +266,7 @@ aside{
   box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
 }
 
-/*This changes the h1 that can be found at the top of most, if not all, .post text and/or media content.*/
+/*The h1 elements can be found at the top of each new .txt section. Here, various font styles are added to change their appearance, as well as their padding, font size, letter spacing, margins, alignment, etc. Some styles, like text and box shadows, have also been added to make this element stand out.*/
 
 h1{
   padding: 10px 15px;
@@ -273,7 +284,7 @@ h1{
   box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
 }
 
-/*This is applying padding, line-height, background color, and box-shadow styles to any content that includes the .txt class.*/
+/*This is applying padding, line-height, background color, and box-shadow styles to any content that is located within any element that contains the .txt class.*/
 
 .txt{
   padding: 3px;
@@ -298,7 +309,7 @@ h1{
 
 /*quote*/
 
-/*This is not a necessary style, however, I am leaving it in just in case a quote appears on the page and requires these styles.*/
+/*This is not a necessary style, however, I am leaving it in just in case a quote appears on the page and requires these styles - such as in the event that the essay contains a quotation.*/
 
 .qs{
   padding: 10px;
@@ -312,7 +323,7 @@ h1{
 /*The Chat, Music, and Ask sections are commented out due to the lack of need for them on this type of webpage.*/
 
 /*chat*/
-
+/*
 .chat{
   margin-top: -5px;
   margin-left: -25px;
@@ -326,17 +337,17 @@ h1{
 
 .label{
   font-weight: bold;
-}
+}*/
 
 /*music*/
-
+/*
 .spotify_audio_player{
   height: 80px!important;
-}
+}*/
 
 /*ask*/
 
-.asker{
+/*.asker{
   width: 500px;
   font-weight: bold;
   text-transform: none;
@@ -366,11 +377,11 @@ h1{
   background: #fff;
   color: #222222;
   box-shadow: 3px 3px rgba(0, 0, 0, 0.02);
-}
+}*/
 
 /*perma*/
 
-/*The .perma class is located beneath each .post element to supply space for a back to top (txt-to-top) button, as well as an a element to direct the user to the source of the information and/or image when interacted with.*/
+/*The .perma class is located beneath each .post element to supply space for a back to top (.txt-to-top) button, as well as an a element to direct the user to the source of the information and/or image when interacted with.*/
 
 .perma{
   text-align: center;
@@ -449,6 +460,8 @@ h1{
 
 /*footer*/
 
+/*These styles will be applied to any element that contains the .footer class. They will change a few font styles as well as various margin, and text styles.*/
+
 .footer {
   margin-top: 3px;
   line-height: 30px;
@@ -461,7 +474,7 @@ h1{
 }
 
 
-/*The rest of the code from here down is commented out due to the lack of necessity for them and their functions, as they do not apply for this type of page, but are from the original code source.*/
+/*All of the code below this comment is from the original code and is not needed for this page. I left it in just in case it might be needed, or simply to credit the original author of the code for their work.*/
 
 
 /*--PERMALINK PAGE---*/

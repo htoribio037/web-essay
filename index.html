@@ -4,7 +4,7 @@ Index for Web Essay Project
 Author: Harley Toribio
 Date: 10.6.17
 
-((The basis for this code was originally designed by the author madoof/flirtastic on tumblr. However, much of the original html is NOT included.))
+((The basis for this code was originally designed by the author madoof/flirtastic on tumblr. However, much of the original html is NOT included. A link to their codes page can be found within the left side "navigation" on the page.))
 -->
 <html>
 
@@ -12,35 +12,42 @@ Date: 10.6.17
   <meta charset="utf-8">
     <!-- The following scripts are used through the creator for the outline of this web page to enable certain functions. More scripts will be located below the body. -->
   <script src="https://use.fontawesome.com/45565ed01f.js"></script>
-    <!-- The two links below this comment are the two fonts I used within the webpage. They were linked from Google Fonts. -->
+    <!-- The two links below this comment are the two fonts I used within the webpage, Montserrat and Roboto. They were linked from Google Fonts. -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto"
   rel="stylesheet">
+  <!-- This script is commented out because it doesn't effect the webpage, however it is still included in case it is needed in any way. -->
   <!-- <script src="https://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=7e0654d636b56bfe6a0970b99e23e0f7"></script> -->
   <!-- This fontawesome script links back to any fontawesome icones used within this page. They are primarily featured within the nav to the left side of the page. -->
   <script src="https://use.fontawesome.com/5b270f343a.js"></script>
+  <!-- These scripts were within the original code for this page and I did not want to remove them in case they are an important part of the webpage's functionality. -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="http://static.tumblr.com/rzl30kg/eAxm7a751/jquery.style-my-tooltips.js"></script>
   <link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css" />
   <script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
-  <!-- This stylesheet is the primary/only one for this webpage. -->
+  <!-- This stylesheet is the primary one for this page and declares most, if not all, significant styles. -->
   <link rel="stylesheet" href="base.css">
+  <!-- The text within this title element will appear on the tab for this page and will include its title. -->
   <title>web essay</title>
 </head>
 
 <body>
-<!-- This container div sets up the outline for all content being displayed on the page. check .container in css for specific styles. -->
+<!-- The .container class is being applied here because it will house all other content within the page, but not past the closing body element. -->
   <div class="container">
     <aside>
+      <!-- #links is the section on the left hand side of the page that acts as a sort of navigation bar made up of various anchor tags and icons. -->
       <div id="links">
-          <!-- #links is the section on the left hand side that acts as a sort of nav bar made up of a elements -->
+          <!-- Each nav item will link back to either a source or different part of the page. This one will take the user back to the start of the essay from wherever they are on the page. -->
         <a href="#essaylocation">
+          <!-- By classifying each nav link within a different number (1-5), certain styles can be directed to each one. In this case, by giving them their own unique class, each one can be assigned its own color. -->
           <div class="nav link1">
-              <!-- By defining each nav link 1-5, I'm able to insert certain icons for each one that corresponds best with its content. -->
+            <!-- This i element is being used to import an icon from fontawesome. Each "navigation" element will have its own unique icon. -->
             <i class="fa fa-file-text-o" aria-hidden="true"></i>
           </div>
         </a>
-        <a >
+        <!-- Each nav item will link back to either a source or different part of the page. This one will take the user to any essay sources used for research, quotes, etc. -->
+        <a href="">
+          <!-- The rest of these "navigation" items will be set up the same way as the first one. They will all have a unique class and fontawesome icon, as well as be an anchor tag. -->
           <div class="nav link2">
             <!-- All of the fa fa-### classes are from fontawesome and are used for each #link (1-5), as well as the .back-to-top function. -->
               <i class="fa fa-paperclip" aria-hidden="true"></i>
@@ -57,7 +64,7 @@ Date: 10.6.17
             <i class="fa fa-code" aria-hidden="true"></i>
           </div>
         </a>
-        <!-- This link connects to my West-MEC GitHub account. -->
+        <!--When clicked, this link will take the user to my github page. -->
         <a href="https://github.com/htoribio037">
           <div class="nav link5">
             <i class="fa fa-github" aria-hidden="true"></i>
@@ -65,7 +72,7 @@ Date: 10.6.17
         </a>
       </div>
     </aside>
-    <!-- I'm using a class of .post to define this section as a new section to contain either text or an image. -->
+    <!-- The class .post is used to identify this content as a new section for either text or images. This class will be found at the start of each section.-->
     <div class="post">
       <h1>Web Essay</h1>
         <!-- The class .txt is used to define the content of this .post as text. -->

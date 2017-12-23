@@ -28,25 +28,31 @@ Date: 10.6.17
   <!-- This stylesheet is the primary one for this page and declares most, if not all, significant styles. -->
   <link rel="stylesheet" href="base.css">
   <!-- The text within this title element will appear on the tab for this page and will include its title. -->
-  <title>web essay</title>
+  <title id="essaystart">Computing History</title>
 </head>
 
 <body>
 <!-- The .container class is being applied here because it will house all other content within the page, but not past the closing body element. -->
   <div class="container">
     <aside>
+
       <!-- #links is the section on the left hand side of the page that acts as a sort of navigation bar made up of various anchor tags and icons. -->
       <div id="links">
+        <div class="nav link1" style="background-color: transparent; width: 110px; box-shadow: none; padding-bottom: 80px; padding-right: 60px">
+              <p><i style="color:pink"class="fa fa-commenting-o" aria-hidden="true"></i> Click on underlined names and machines to view an image of it.</p>
+        </div>
           <!-- Each nav item will link back to either a source or different part of the page. This one will take the user back to the start of the essay from wherever they are on the page. -->
-        <a href="#essaylocation">
-          <!-- By classifying each nav link within a different number (1-5), certain styles can be directed to each one. In this case, by giving them their own unique class, each one can be assigned its own color. -->
-          <div class="nav link1">
-            <!-- This i element is being used to import an icon from fontawesome. Each "navigation" element will have its own unique icon. -->
-            <i class="fa fa-file-text-o" aria-hidden="true"></i>
-          </div>
-        </a>
-        <!-- Each nav item will link back to either a source or different part of the page. This one will take the user to any essay sources used for research, quotes, etc. -->
         <a href="#">
+          <!-- By classifying each nav link within a different number (1-5), certain styles can be directed to each one. In this case, by giving them their own unique class, each one can be assigned its own color. -->
+          <!-- <div class="nav link1"> -->
+            <!-- This i element is being used to import an icon from fontawesome. Each "navigation" element will have its own unique icon. -->
+            <!-- <i class="fa fa-file-text-o" aria-hidden="true" title="essay"></i> -->
+          <!-- </div> -->
+
+        </a>
+
+        <!-- Each nav item will link back to either a source or different part of the page. This one will take the user to any essay sources used for research, quotes, etc. -->
+        <a href="essaysource.txt">
           <!-- The rest of these "navigation" items will be set up the same way as the first one. They will all have a unique class and fontawesome icon, as well as be an anchor tag. -->
           <div class="nav link2">
             <!-- All of the fa fa-### classes are from fontawesome and are used for each #link (1-5), as well as the .back-to-top function. -->
@@ -75,40 +81,56 @@ Date: 10.6.17
     </aside>
     <!-- The class .post is used to identify this content as a new section for either text or images. This class will be found at the start of each section.-->
     <div class="post">
-      <h1>Web Essay</h1>
+      <h1>Computing History Essay</h1>
         <!-- This .txt class will be used at the start of each section with a .post class to distinguish it as having text content. -->
       <div class="txt">
         <p>Harley Toribio</p>
-        <!-- This blockquote will have nested paragraphs. It is used to add styles around the paragraph content - in this case some margins and a left side border. -->
+        <!-- This blockquote will have several nested paragraphs. The blockquote itself is used to add styles around the paragraph content - in this case some margins and a red left side border. -->
       <blockquote>
-        <p>
-          this section will contain the first chunk of information regarding the start of computer tech.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+        <!-- Placed before each paragraph is: &nbsp;. This will add some spacing at the first line of each paragraph to indent it from the left border. -->
+        <p>&nbsp;The timeline of computer development extends far past what many may think. Computers are seen today as entertainment systems that are commonly found within the American home. However, computers didn’t start out as these personal entertainment devices, but rather a calculating machine for solving complicated functions and equations. The first ‘computer’ dates back to the 1600’s with an analytical calculator called the Abacus. The development in-between then and now shows great innovation and taking a look back through the years reveals a lot about the construction of the computers we rely on today.</p>
+	      <p>&nbsp;The <u><a href="abacus.jpg">Abacus</a></u> was a simple calculating device made up of a, typically, wooden frame with several rods going down. Each rod carried 5 beads. This machine dates very far back and it’s name comes from the Greek word: άβακασ, or board/table. This device was later innovated in 1642 by Blaise Pascal. This became known as the <u><a href="pascaline.jpg">Pascaline</a></u>. This was an improvement upon the original Abacus and was a mechanical calculator used to solve various arithmetic functions. This machine established the basis of the reasoning for computers - to calculate, solve, and work out certain functions and equations. Up until this point, both the Abacus and the Pascaline could only compute addition and subtraction. Needs for calculations like multiplication soon provided need for improvement, yet again, on these machines.</p>
+        <p>&nbsp;The next mechanical calculator was created by Gottfried Wilhelm von Leibniz in 1694. He made it so this calculator could process more advanced arithmetic functions - such as multiplication. This later paved the way for all future versions of the mechanical calculator. Following him is a more popular name, <u><a href="cbabbage.jpg">Charles Babbage</a></u>. Babbage set the stage for the <em>real</em> start of computers. In 1812 he proposed idea for a large steam locomotive machine called the Difference Engine. 10 years later, the first general computer was created called the Analytical Engine. This machine incorporated 50,000 components as well as a punch card operating system. These perforated cards printed as a result of calculations could store 1,000 numbers of up to 50 decimal digits long. This, by far, was a major part of the development of future computers.</p>
+        <p>&nbsp;Time passed, and many invented computers followed in the footsteps of Charles Babbage. A certain American inventor by the name of Herman Hollerith created a computer to calculate statistics of the U.S census (utilizing the punch card system). He became the founder of the International Business Machines, or IBM.</p>
       </blockquote>
       <!-- This is the closing .txt class div. -->
       </div>
       <!-- The .perma class is used to create a small bar beneath each text and/or image post to link the source of its content, as well as provide a link to the top of the page. -->
       <div class="perma">
-        <a href="#">Source</a> -
+        Sources: <a href="essaysource.txt">Text Citations</a>,<a href="imagesources.txt">Image Ciations</a> |
         <!-- The .txt-to-top class is utilized here and on each post, within the .perma section, to apply javascript (located below the body) to create a button that scrolls to the top of the page. -->
         <a href="#" class="txt-to-top">Back to Top</a>
       </div>
     </div>
     <div class="post">
-        <!-- Unlike the post above this, identifiable with a .txt class, this image post does not contain an .img/.image (etc.) class. This is just a normal .post section that will contain an image or any other type of media. -->
-      <img src="http://images.computerhistory.org/timeline/timeline_computers_1941.bombe.jpg" alt="">
+        <!-- This is a simple informational post to let the user know about the media that will be below this. -->
+        <!-- <div class="txt">
+          <h1>Image Presentation</h1>
+      <blockquote>
+        <p>The following images will be presented in the order in which they were mentioned throughout the essay. All image sources can be found within the image nav link of source link below each image.</p>
+      </blockquote>
+      </div>
       <div class="perma">
-        <a href="http://www.computerhistory.org/timeline/computers/#169ebbe2ad45559efbc6eb357207bb27">Source</a>
+        <a class="txt-to-top">Back to Top</a>
+      </div> -->
+      <!-- This is the footer section of the page. It will contain the link back to the original author of this code. -->
+
+  </div>
+    <div class="post">
+        <!-- Unlike the post above this, identifiable with a .txt class, this image post does not contain an .img/.image (etc.) class. This is just a normal .post section that will contain an image or any other type of media. -->
+      <!-- <img src="abacus.jpg" alt="Abacus" id="abacusimg">
+      <div class="perma">
+        <a href="https://pixabay.com/en/abacus-count-mathematics-485705/">Source</a>
         <a class="txt-to-top">Back to Top</a>
       </div>
+      <div class="post"> -->
+          <!-- Unlike the post above this, identifiable with a .txt class, this image post does not contain an .img/.image (etc.) class. This is just a normal .post section that will contain an image or any other type of media. -->
+        <!-- <img src="pascaline.jpg" alt="Pascaline" id="pascalineimg">
+        <div class="perma">
+          <a href="pascaline.jpg">Source</a>
+          <a class="txt-to-top">Back to Top</a>
+        </div>
+      </div> -->
       <!-- This is the footer section of the page. It will contain the link back to the original author of this code. -->
       <div class="footer">
         &copy; <a href="https://http://flirtastic.tumblr.com">madoof/firtastic</a>
